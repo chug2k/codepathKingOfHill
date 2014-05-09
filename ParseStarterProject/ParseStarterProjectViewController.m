@@ -17,8 +17,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.userTextField setText:@"Hello World!"];
+    [self.userTextField setDelegate:self];
     
 }
 
@@ -26,6 +25,20 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self.latestTextField setText:textField.text];
+
+    PFObject *testObject = [PFObject objectWithClassName:@"Message"];
+    testObject[@"text"] = textField.text;
+    [testObject saveInBackground];
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];    
+    return YES;
 }
 
 @end

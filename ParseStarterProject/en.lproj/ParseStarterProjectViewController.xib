@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ParseStarterProjectViewController">
             <connections>
+                <outlet property="latestTextField" destination="zWg-kc-pZd" id="0TY-fN-SYk"/>
                 <outlet property="userTextField" destination="pYd-gj-8QP" id="G6z-Te-yWu"/>
                 <outlet property="view" destination="6" id="7"/>
             </connections>
@@ -32,7 +33,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="pYd-gj-8QP">
-                    <rect key="frame" x="112" y="71" width="97" height="30"/>
+                    <rect key="frame" x="40" y="71" width="240" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
