@@ -1,4 +1,4 @@
-@interface ParseStarterProjectViewController : UIViewController <UITextFieldDelegate>
+@interface ParseStarterProjectViewController : UIViewController
 
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *userTextField;
 @property (unsafe_unretained, nonatomic) IBOutlet UITextView *latestTextField;
